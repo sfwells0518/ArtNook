@@ -6,7 +6,95 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 #root {
+  font-family: Trebuchet MS;
   background-image: url('./assets/so-white.png');
 }
 
+#paintings-index {
+  margin-top: 20px;
+  /* Add margin-top */
+  margin-bottom: 20px;
+  /* Add margin-bottom */
+}
+
+#paintings-index .card-body-custom {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  /* Increase margin-bottom */
+  padding: 0;
+}
+
+#paintings-index .card-body-custom .image-container {
+  height: 0;
+  padding-top: 100%;
+  /* Set padding-top to maintain aspect ratio */
+  position: relative;
+  overflow: hidden;
+}
+
+#paintings-index .card-body-custom .image-container .card-image {
+  position: absolute;
+  top: 50%;
+  /* Adjusted */
+  left: 50%;
+  /* Adjusted */
+  transform: translate(-50%, -50%);
+  /* Added */
+  width: 100%;
+  height: auto;
+  /* Changed to auto */
+  object-fit: contain;
+}
+
+#paintings-index h1 {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+#paintings-index .card-title {
+  height: 2.5em;
+ 
+  padding-top: 5px;
+}
+
+#paintings-index .red-button {
+  background-color: rgb(255, 90, 95);
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+  width: 100px;
+  position: relative;
+  top: -10px;
+}
+
+.mt-4 {
+  padding-top: 7px;
+}
+
+#paintings-index .card {
+  height: 100%;
+}
+
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.custom-card .card-body-custom {
+  flex-grow: 1;
+}
