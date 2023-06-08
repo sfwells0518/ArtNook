@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react"
@@ -11,7 +11,6 @@ export function Chat() {
     {
       message: "Hello, I am ChatGPT!",
       sender: "ChatGPT" 
-
     }
   ])
 
@@ -29,7 +28,7 @@ export function Chat() {
   }
 
   return (
-    <div className="App">
+    <div className="Chat">
       <div style={{ position: "relative", height: "800px", width: "700px" }}>
         <MainContainer>
           <ChatContainer>
@@ -48,4 +47,4 @@ export function Chat() {
   )
 }
 
-export default App
+export default Chat
