@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 export function Header() {
   return (
-    <Disclosure as="nav" className="bg-white-800">
+    <Disclosure as="nav" className="nav-bg">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -48,8 +48,9 @@ export function Header() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? "bg-gray-900 text-white" : "text-black-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          item.current ? "bg-gray-900 text-white" : "text-black-300",
+                          "rounded-md px-3 py-2 text-sm font-medium",
+                          !item.current && "hover-item" // Add the hover-item class when item.current is false
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -71,7 +72,7 @@ export function Header() {
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-11 w-11 rounded-full"
+                        className="rounded-full profile-image "
                         src="https://media.licdn.com/dms/image/C4E03AQEVsg4p5PSgKA/profile-displayphoto-shrink_800_800/0/1547178604396?e=2147483647&v=beta&t=Qrq9uDeN9olxnu5ucU0ESYTLzNCzganyO-VeY7I_PdI"
                         alt=""
                       />

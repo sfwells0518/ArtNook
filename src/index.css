@@ -12,15 +12,13 @@ body {
 }
 
 #root {
-  font-family: Trebuchet MS;
-  background-image: url('./assets/so-white.png');
+  font-family: Palatino;
+  background-image: url('./assets/papyrus.webp');
 }
 
 #paintings-index {
   margin-top: 20px;
-  /* Add margin-top */
   margin-bottom: 20px;
-  /* Add margin-bottom */
 }
 
 #paintings-index .card-body-custom {
@@ -38,6 +36,7 @@ body {
   /* Set padding-top to maintain aspect ratio */
   position: relative;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 #paintings-index .card-body-custom .image-container .card-image {
@@ -47,11 +46,14 @@ body {
   left: 50%;
   /* Adjusted */
   transform: translate(-50%, -50%);
+  padding-top: -10px;
+  padding-bottom: 10px;
   /* Added */
   width: 100%;
   height: auto;
   /* Changed to auto */
   object-fit: contain;
+  border-radius: 22px;
 }
 
 #paintings-index h1 {
@@ -61,8 +63,9 @@ body {
 }
 
 #paintings-index .card-title {
-  height: 2.5em;
- 
+  height: 2.0em;
+  font-size: 20px;
+  margin-top:-10px;
   padding-top: 5px;
 }
 
@@ -70,6 +73,8 @@ body {
   height: 2.5em;
   padding-top: 5px;
   padding-bottom: 10px;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 #paintings-index .red-button {
@@ -103,4 +108,21 @@ body {
 
 .custom-card .card-body-custom {
   flex-grow: 1;
+}
+
+.profile-image {
+  width: auto;
+  height: 40px;
+  object-fit: cover;
+}
+
+.nav-bg {
+  background-color: white;
+  border-radius: 20px;
+  width: auto;
+}
+
+.hover-item:hover {
+  background-color: rgb(255, 90, 95);
+  color: rgb(0, 0, 0);
 }

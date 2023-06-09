@@ -27,7 +27,7 @@ export function PaintingsIndex(props) {
                     props.onShowPainting(painting);
                   }}
                 >
-                  Buy Now
+                  Explore
                 </button>
               </div>
             </div>

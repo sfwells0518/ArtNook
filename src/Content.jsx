@@ -2,6 +2,7 @@ import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { PaintingsIndex } from "./PaintingsIndex";
+import { CartedPaintingsIndex } from "./CartedPaintingsIndex";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -33,8 +34,7 @@ export function Content() {
   return (
     <Routes>
       <Route path="/" element={<PaintingsIndex paintings={paintings} onShowPainting={handleShowPainting} />} />
-      
+      <Route path="/carted_paintings" element={<CartedPaintingsIndex />} />
     </Routes>
-    
   );
 }
