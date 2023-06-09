@@ -16,7 +16,6 @@ export function CartedPaintingsIndex() {
 
   return (
     <div id="carted-paintings-index">
-      <p>hello</p>
       {cartedPaintings.map((cartedPainting) => (
         <div key={cartedPainting.id}>
           <p>id: {cartedPainting.id}</p>

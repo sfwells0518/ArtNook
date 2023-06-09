@@ -2,6 +2,7 @@ import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { PaintingsIndex } from "./PaintingsIndex";
+import { PaintingsShow } from "./PaintingsShow";
 import { CartedPaintingsIndex } from "./CartedPaintingsIndex";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -27,9 +28,6 @@ export function Content() {
     setCurrentPainting(myPainting)
   };
 
-  const handleClose = () => {
-    setIsPaintingsShowVisible(false);
-  };
 
   return (
     <Routes>

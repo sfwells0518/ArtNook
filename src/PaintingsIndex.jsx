@@ -1,7 +1,18 @@
 import { useState } from "react";
+import axios from "axios";
 
 export function PaintingsIndex(props) {
   console.log(props.paintings);
+
+  const handleClick = async (id) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/paintings/${id}.json`);
+      const data = response.data;
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div id="paintings-index" className="mt-4">
@@ -23,9 +34,8 @@ export function PaintingsIndex(props) {
               <div className="mt-auto text-center">
                 <button
                   className="red-button"
-                  onClick={() => {
-                    props.onShowPainting(painting);
-                  }}
+                  onClick={() => 
+                    handleClick(painting.id)}
                 >
                   Explore
                 </button>
