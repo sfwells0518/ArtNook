@@ -6,6 +6,7 @@ import { PaintingsShow } from "./PaintingsShow";
 import { CartedPaintingsIndex } from "./CartedPaintingsIndex";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Chat } from "./Chat";
 
 
 export function Content() {
@@ -32,7 +33,12 @@ export function Content() {
   return (
     <Routes>
       <Route path="/" element={<PaintingsIndex paintings={paintings} onShowPainting={handleShowPainting} />} />
+      <Route
+        path="/paintings/:id"
+        element={<PaintingsShow painting={currentPainting} onShowPainting={handleShowPainting} />}
+      />
       <Route path="/carted_paintings" element={<CartedPaintingsIndex />} />
+      <Route path="/chat" element={<Chat />} />
     </Routes>
   );
 }

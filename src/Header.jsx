@@ -1,10 +1,9 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, XMarkIcon, HomeIcon } from "@heroicons/react/24/outline";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline"; 
 import { Link } from "react-router-dom";
-import { Chat } from "./Chat";
-
+import { Chat }  from "./Chat";
 
 
 const navigation = [
@@ -38,8 +37,13 @@ export function Header() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <b>
-                    <header>ArtNook ||</header>
+                    <header>ArtNook</header>
                   </b>
+                  <div className="flex items-center ml-2 mb-2">
+                    <Link to="/">
+                      <HomeIcon className="h-6 w-6 text-gray-700" aria-hidden="true" />
+                    </Link>
+                  </div>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
