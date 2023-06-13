@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import heroImage from "./assets/artnook_hero_img.png";
-import { Link } from "react-router-dom";
 import { PaintingsShow } from "./PaintingsShow";
- 
-export function PaintingsIndex(props) {
-  console.log(props.paintings);
+import { Modal } from "./Modal";
 
+export function AllPaintings() {
   const [paintings, setPaintings] = useState([]);
+  const [currentPainting, setCurrentPainting] = useState(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     async function fetchPaintings() {
@@ -26,54 +25,25 @@ export function PaintingsIndex(props) {
   const handleClick = async (id) => {
     try {
       const response = await axios.get(`http://localhost:3000/paintings/${id}.json`);
-      const data = response.data;
-      console.log(data);
-      window.location.href = "/paintings/:id";
+      const paintingData = response.data;
+      setCurrentPainting(paintingData);
+      setIsModalVisible(true);
     } catch (error) {
       console.error(error);
     }
   };
 
-  const paintingsByCategory = paintings.reduce((acc, painting) => {
-    const category = painting.categories[0]?.name;
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(painting);
-    return acc;
-  }, {});
-
-  const paintingsFromCategories = [];
-
-  Object.keys(paintingsByCategory).forEach((category) => {
-    const paintingsInCategory = paintingsByCategory[category];
-    if (paintingsInCategory.length > 0) {
-      paintingsFromCategories.push(paintingsInCategory[0]);
-    }
-  });
+  const handleClose = () => {
+    setIsModalVisible(false);
+    setCurrentPainting(null);
+  };
 
   return (
     <>
-      <div className="hero-container">
-        <img src={heroImage} alt="Hero" />
-        <div className="hero-text">
-          <h1>
-            <em>vintage</em> art for the
-            <br></br>
-            <em>modern</em> home
-          </h1>
-          <Link to="/all-paintings">
-            <button className="all-paintings-button">Shop All Paintings</button>
-          </Link>
-        </div>
-      </div>
-      <div className="all-categories-header">
-        <h1> Shop by Category </h1>
-      </div>
-      <div id="paintings-index" className="mt-4">
+      <div id="all-paintings" className="mt-4">
         <br />
         <div className="row">
-          {paintingsFromCategories.map((painting) => (
+          {paintings.map((painting) => (
             <div key={painting.id} className="col-sm-3 mb-4">
               <div className="card custom-card">
                 <div className="card-body card-body-custom">
@@ -90,14 +60,20 @@ export function PaintingsIndex(props) {
                   </div>
                 </div>
                 <div className="mt-auto text-center">
-                  <button className="shop-button" onClick={() => handleClick(painting.id)}>
-                    Shop {painting.categories[0].name}
+                  <button className="details-button" onClick={() => handleClick(painting.id)}>
+                    See Details
                   </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {isModalVisible && currentPainting && (
+          <Modal show={isModalVisible} onClose={handleClose}>
+            <PaintingsShow painting={currentPainting} />
+          </Modal>
+        )}
       </div>
     </>
   );

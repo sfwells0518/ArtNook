@@ -1,12 +1,19 @@
 import axios from "axios";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
+import { SignUp } from "./SignUp";
+import { Login } from "./LogIn";
+import { LogoutLink } from "./LogoutLink";
 import { useState, useEffect } from "react";
 import { PaintingsIndex } from "./PaintingsIndex";
 import { PaintingsShow } from "./PaintingsShow";
 import { CartedPaintingsIndex } from "./CartedPaintingsIndex";
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Chat } from "./Chat";
+import { ArtistMap } from "./ArtistMap";
+import { AllPaintings } from "./AllPaintings";
+import { Modal } from "./Modal";
+
 
 
 export function Content() {
@@ -29,16 +36,33 @@ export function Content() {
     setCurrentPainting(myPainting)
   };
 
+   const handleShowPaintingFromAllPaintings = (id) => {
+     const painting = paintings.find((painting) => painting.id === id);
+     handleShowPainting(painting);
+   };
+
+   const handleClose = () => {
+     setIsPaintingsShowVisible(false);
+   };
+  
+
 
   return (
-    <Routes>
-      <Route path="/" element={<PaintingsIndex paintings={paintings} onShowPainting={handleShowPainting} />} />
-      <Route
-        path="/paintings/:id"
-        element={<PaintingsShow painting={currentPainting} onShowPainting={handleShowPainting} />}
-      />
-      <Route path="/carted_paintings" element={<CartedPaintingsIndex />} />
-      <Route path="/chat" element={<Chat />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<LogoutLink />} />
+        <Route path="/home" element={<PaintingsIndex paintings={paintings} onShowPainting={handleShowPainting} />} />
+        <Route path="/all-paintings" element={<AllPaintings onShowPainting={handleShowPaintingFromAllPaintings} />} />
+        <Route path="/carted_paintings" element={<CartedPaintingsIndex />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/artist-map" element={<ArtistMap />} />
+      </Routes>
+
+      <Modal show={isPaintingsShowVisible} onClose={handleClose}>
+        <PaintingsShow product={currentPainting} />
+      </Modal>
+    </>
   );
 }

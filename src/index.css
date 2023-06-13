@@ -12,8 +12,7 @@ body {
 }
 
 #root {
-  font-family: Palatino;
-  background-image: url('./assets/papyrus.webp');
+  font-family: 'Avenir';
 }
 
 #paintings-index {
@@ -22,38 +21,22 @@ body {
 }
 
 #paintings-index .card-body-custom {
-  text-align: center;
+  height: 100%;
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  /* Increase margin-bottom */
   padding: 0;
 }
 
 #paintings-index .card-body-custom .image-container {
-  height: 0;
-  padding-top: 100%;
-  /* Set padding-top to maintain aspect ratio */
-  position: relative;
+  width: 100%;
+  height: 90%;
   overflow: hidden;
-  border-radius: 15px;
 }
 
 #paintings-index .card-body-custom .image-container .card-image {
-  position: absolute;
-  top: 50%;
-  /* Adjusted */
-  left: 50%;
-  /* Adjusted */
-  transform: translate(-50%, -50%);
-  padding-top: -10px;
-  padding-bottom: 10px;
-  /* Added */
   width: 100%;
-  height: auto;
-  /* Changed to auto */
-  object-fit: contain;
-  border-radius: 22px;
+  height: 90%;
+  object-fit: cover;
 }
 
 #paintings-index h1 {
@@ -64,31 +47,120 @@ body {
 
 #paintings-index .card-title {
   height: 2.0em;
-  font-size: 18px;
-  margin-top:-10px;
+  font-size: 10px;
+  margin-top: 7px;
   padding-top: 5px;
+  margin-bottom: 25px;
 }
 
 #paintings-index .card-artist {
   height: 2.5em;
   padding-top: 5px;
   padding-bottom: 10px;
-  margin-top: 10px;
-  font-size: 15px;
+  margin-top: 15px;
+  font-size: 10px;
 }
 
-#paintings-index .red-button {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border: none;
+#paintings-index .shop-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border: 1px solid black;
   padding: 10px 10px;
-  font-size: 1em;
+  font-size: 13px;
   cursor: pointer;
   transition: background-color 0.3s;
-  border-radius: 10px;
-  width: 100px;
+  border-radius: 5px;
+  width: 145px;
+  margin: auto;
+  display: block;
+}
+
+#paintings-index .shop-button:hover {
+  background-color: #5C8F8E;
+  color: white;
+}
+
+#all-paintings .details-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border: 1px solid black;
+  padding: 10px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  width: 200px;
   position: relative;
-  top: 5px;
+  margin-left: -8.5px;
+}
+
+#all-paintings .details-button:hover {
+  background-color: #5C8F8E;
+  color: white;
+}
+
+#all-paintings .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#all-paintings .image-container:hover .overlay {
+  opacity: 1;
+}
+
+#all-paintings .image-container .text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#all-paintings .card-body-custom {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+#all-paintings .card-body-custom .image-container {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#all-paintings .card-body-custom .image-container .card-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+#all-paintings .card-title {
+  height: 2.0em;
+  font-size: 10px;
+  margin-top: 7px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+#all-paintings .card-artist {
+  height: 2.5em;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  font-size: 10px;
 }
 
 .mt-4 {
@@ -110,20 +182,299 @@ body {
   flex-grow: 1;
 }
 
-.profile-image {
-  width: auto;
-  height: 40px;
-  object-fit: cover;
-}
 
 .nav-bg {
-  background-color: white;
-  border-radius: 20px;
-  width: auto;
+  background-color: rgba(239, 239, 239);
+  border-radius: 5px;
+  width: 100%;
+  height: 65px;
+  opacity: 100%;
+  align-items: center;
 }
 
-.hover-item:hover {
-  background-color: rgb(255, 90, 95);
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
+.footer-bg {
+  background-color: rgba(239, 239, 239);
+  border-radius: 5px;
+  width: 100%;
+  height: 65px;
+  opacity: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.hover-item:hover>div {
+  text-decoration-color: #5C8F8E;
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 10px;
+}
+
+.hover-item:hover>span {
+  text-decoration-color: #5C8F8E;
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 10px;
+}
+
+.Chat {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  border: 2px solid #f2f2f2;
+}
+
+.ChatContainer {
+  background-color: #ffffff;
+}
+
+.Message {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.MessageInput .inputArea {
+  background-color: #ffffff !important;
+  /* Add !important */
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.message-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.map-container {
+  margin-top: 22px;
+  padding-bottom: 15px;
+  width: 100%;
+  height: 100vh;
+}
+
+#paintings-index .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#paintings-index .image-container:hover .overlay {
+  opacity: 1;
+}
+
+#paintings-index .image-container .text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.category-name {
+  font-size: 37px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.hero-container {
+  opacity: 100%;
+  margin: 15px auto;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 47px;
+  text-align: center;
+}
+
+/* Sign Up Form CSS*/
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+
+.form-box {
+  border: 1px solid #5C8F8E;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  background-color: #efefef;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.form-section a:hover {
+  text-decoration-color: #5C8F8E;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/*Buttons*/
+.form button {
+  background-color: #5C8F8E;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #4a7473;
+}
+
+.signup-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 65px);
+  margin-top: -100px;
+
+}
+
+.login-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -250px;
+}
+
+.relative.ml-3 {
+  padding: 0 30px;
+}
+
+.relative.ml-3:hover {
+background-color: #5C8F8E;
+color:#ffffff;
+
+border-radius: 5px;
+}
+
+li {
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li a {
+  position: relative;
+  left: 0;
+}
+
+.all-paintings-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border: 1px solid black;
+  padding: 10px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  width: 130px;
+  position: relative;
+  margin-left: -8.5px;
+  }
+
+  .all-paintings-button:hover {
+    background-color: #5C8F8E;
+    color: white;
+  }
+
+.items-center.h-6.w-6 {
+      color: #5C8F8E;
+}
+
+.all-categories-header h1 {
+  padding-top: 30px;
+  margin-bottom: -10px;
+  padding-bottom: 0px;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.add-to-bag-button {
+  background-color: #5C8F8E;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  width: 145px;
+  height: 40px;
+  margin-top: 15px;
+
+}
+
+.paintings-show h2 {
+  font-weight: 600;
+  font-size: 25px;
+  font-style: italic;
+}
+
+
