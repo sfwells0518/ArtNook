@@ -1,6 +1,7 @@
 export function PaintingsShow({ painting }) {
   return (
     <div className="paintings-show">
+      <h4>{painting.categories[0]?.name}</h4>
       <h2>{painting.name}</h2>
       <br></br>
       <h3>{painting.artist.name}</h3>
