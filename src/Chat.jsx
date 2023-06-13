@@ -40,7 +40,7 @@ export function Chat() {
 
     const systemMessage = {
       role: "system",
-      content: "Speak and answer all user questions like you run a museum and know everything there is to know about paintings and artists.",
+      content: "answer all user questions like you are an art history professor or run a museum and know everything about paintings and artists",
     }
     
     const apiRequestBody = {

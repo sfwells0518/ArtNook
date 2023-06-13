@@ -1,3 +1,4 @@
+import React from "react";
 import "./Modal.css";
 
 export function Modal(props) {
@@ -6,7 +7,7 @@ export function Modal(props) {
       <div className="modal-background">
         <section className="modal-main">
           <div className="modal-content">
-            {props.children}
+            <div className="image-container">{props.children}</div>
             <button className="close" type="button" onClick={props.onClose}>
               &#x2715;
             </button>
@@ -14,5 +15,7 @@ export function Modal(props) {
         </section>
       </div>
     );
+  } else {
+    return null;
   }
 }

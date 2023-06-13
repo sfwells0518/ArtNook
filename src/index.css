@@ -457,7 +457,7 @@ li a {
   font-weight: 800;
 }
 
-.add-to-bag-button {
+.add-to-cart-button {
   background-color: #5C8F8E;
   color: white;
   border: none;
@@ -472,9 +472,15 @@ li a {
 }
 
 .paintings-show h2 {
-  font-weight: 600;
+  padding-top: 20px;
+  font-weight: 425;
   font-size: 25px;
   font-style: italic;
+}
+
+.paintings-show h6 {
+  font-weight: 500;
+  font-size: 15px;
 }
 
 

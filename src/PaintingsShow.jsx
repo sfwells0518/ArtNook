@@ -14,7 +14,7 @@ export function PaintingsShow({ painting }) {
       <h6>Price: ${painting.price}</h6>
 
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <button className="add-to-bag-button">Add to Bag</button>
+        <button className="add-to-cart-button">Add to Cart</button>
       </div>
     </div>
   );
