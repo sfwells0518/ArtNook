@@ -37,6 +37,7 @@ export function SignUp() {
     <div className="signup-form-wrapper">
       <div className="form-box">
         <form className="form">
+          <br></br>
           <span className="title">Sign Up</span>
           <ul>
             {errors.map((error) => (
@@ -60,7 +61,6 @@ export function SignUp() {
             />
             {passwordLength}
             <input name="password_confirmation" type="password" className="input" placeholder="Password Confirmation" />
-            <input name="user_image_url" type="text" className="input" placeholder="User Image URL" />
           </div>
           <button>Sign Up</button>
         </form>

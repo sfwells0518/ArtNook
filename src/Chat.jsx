@@ -76,16 +76,29 @@ export function Chat() {
   }
 
   return (
-    <div className="Chat" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "75vh" }}>
-      <div style={{ justifyContent: "center", height: "500px", width: "700px" }}>
-        <MainContainer>
-          <ChatContainer>
-            <MessageList className="message-list" typingIndicator={typing ? <TypingIndicator content="Arnold is typing" /> : null}>
+    <div
+      className="Chat"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "75vh",
+        backgroundColor: "lightgrey",
+      }}
+    >
+      <div style={{ justifyContent: "center", height: "600px", width: "800px" }}>
+        <MainContainer className="parent-chat-container">
+          <ChatContainer className="child-chat-container">
+            <MessageList
+              className="message-list"
+              style={{ backgroundColor: "white" }}
+              typingIndicator={typing ? <TypingIndicator content="Arnold is typing" /> : null}
+            >
               {messages.map((message, i) => {
                 return <Message key={i} model={message} />;
               })}
             </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />
+            <MessageInput placeholder="Type question here" onSend={handleSend} />
           </ChatContainer>
         </MainContainer>
       </div>

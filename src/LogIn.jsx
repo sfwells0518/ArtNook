@@ -31,6 +31,7 @@ export function Login() {
   return (
     <div className="login-form-wrapper">
       <div className="form-box">
+        <br></br>
         <center>
           <span className="title">Log In</span>
         </center>

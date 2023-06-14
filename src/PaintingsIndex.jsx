@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import heroImage from "./assets/artnook_hero_img.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PaintingsShow } from "./PaintingsShow";
- 
+import { Impressionism } from "./Impressionism";
+
 export function PaintingsIndex(props) {
   console.log(props.paintings);
 
   const [paintings, setPaintings] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchPaintings() {
@@ -23,12 +25,12 @@ export function PaintingsIndex(props) {
     fetchPaintings();
   }, []);
 
-  const handleClick = async (id) => {
+  const handleClick = async (id, category) => {
     try {
-      const response = await axios.get(`http://localhost:3000/paintings/${id}.json`);
+      const response = await axios.get(`http://localhost:3000/paintings.json`);
       const data = response.data;
       console.log(data);
-      window.location.href = "/paintings/:id";
+      navigate(`/paintings/${category.toLowerCase()}`); // Navigate to the category-specific page
     } catch (error) {
       console.error(error);
     }
@@ -90,8 +92,8 @@ export function PaintingsIndex(props) {
                   </div>
                 </div>
                 <div className="mt-auto text-center">
-                  <button className="shop-button" onClick={() => handleClick(painting.id)}>
-                    Shop {painting.categories[0].name}
+                  <button className="shop-button" onClick={() => handleClick(painting.id, painting.categories[0].name)}>
+                    Explore {painting.categories[0].name}
                   </button>
                 </div>
               </div>
