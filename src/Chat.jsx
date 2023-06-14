@@ -84,7 +84,7 @@ export function Chat() {
         justifyContent: "center",
         alignItems: "center",
         height: "75vh",
-        backgroundColor: "rgba(239, 239, 239)",
+        backgroundColor: "white",
       }}
     >
       <div style={{ justifyContent: "center", height: "600px", width: "900px" }}>
@@ -99,11 +99,7 @@ export function Chat() {
                 return <Message key={i} model={message} />;
               })}
             </MessageList>
-            <MessageInput
-              placeholder="Type question here..."
-              onSend={handleSend}
-              attachButton={false}
-            />
+            <MessageInput placeholder="Type message here..." onSend={handleSend} attachButton={false} />
           </ChatContainer>
         </MainContainer>
       </div>

@@ -514,20 +514,31 @@ li a {
 }
 
 .cs-message__content {
-  background-color: #5C8F8E !important;
+  background-color: #d59987;
 }
 
 .cs-message-input__content-editor-wrapper {
-  background-color: #d59987;
+  background-color: #b3b2b8;
+  border-radius: 5px;
 }
 
 .cs-message-input__content-editor {
-  background-color: #d59987;
+  background-color: #b3b2b8;
   color: black;
+
 }
 
 .cs-button--send {
-  color: black;
+  color: #5C8F8E;
+  
+}
+
+ .cs-message--outgoing .cs-message__content {
+  background-color: #5C8F8E;
+}
+
+.cs-button:disabled {
+  opacity: 1;
 }
 
 /* Category Pages Styling */
