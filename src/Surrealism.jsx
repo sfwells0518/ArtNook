@@ -4,7 +4,7 @@ import heroImage from "./assets/artnook_hero_img.png";
 import { Link } from "react-router-dom";
 import { PaintingsShow } from "./PaintingsShow";
 
-export function Impressionism(props) {
+export function Surrealism(props) {
   const [paintings, setPaintings] = useState([]);
 
   useEffect(() => {
@@ -21,16 +21,16 @@ export function Impressionism(props) {
     fetchPaintings();
   }, []);
 
-  // Filter paintings by category name "Impressionism"
-  const impressionismPaintings = paintings.filter((painting) => painting.categories[0]?.name === "Impressionism");
+  // Filter paintings by category name "Surrealism"
+  const surrealismPaintings = paintings.filter((painting) => painting.categories[0]?.name === "Surrealism");
 
   return (
     <>
-      <div id="category-impressionism" className="mt-4">
-        <h1>Impressionism</h1>
+      <div id="category-surrealism" className="mt-4">
+        <h1>Surrealism</h1>
         <br />
         <div className="row">
-          {impressionismPaintings.map((painting) => (
+          {surrealismPaintings.map((painting) => (
             <div key={painting.id} className="col-sm-6 mb-2">
               <div className="card custom-card">
                 <div className="card-body card-body-custom">

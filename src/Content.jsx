@@ -13,7 +13,11 @@ import { Chat } from "./Chat";
 import { ArtistMap } from "./ArtistMap";
 import { AllPaintings } from "./AllPaintings";
 import { Impressionism } from "./Impressionism";
+import { Surrealism } from "./Surrealism";
+import { Realism } from "./Realism";
+import { Abstract } from "./Abstract";
 import { Modal } from "./Modal";
+
 
 
 
@@ -60,7 +64,9 @@ export function Content() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/artist-map" element={<ArtistMap />} />
         <Route path="/paintings/impressionism" element={<Impressionism />} />
-        
+        <Route path="/paintings/surrealism" element={<Surrealism />} />
+        <Route path="/paintings/realism" element={<Realism />} />
+        <Route path="/paintings/abstract" element={<Abstract />} />
       </Routes>
 
       <Modal show={isPaintingsShowVisible} onClose={handleClose}>
@@ -71,7 +77,7 @@ export function Content() {
 }
 
 /* Add these once components are created
-  <Route path="/paintings/surrealism" element={<Surrealism />} />
+  
   <Route path="/paintings/realism" element={<Realism />} />
-  <Route path="/paintings/abstract" element={<Abstract />} />
+  
 */
