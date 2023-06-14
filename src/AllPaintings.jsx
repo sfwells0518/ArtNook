@@ -41,6 +41,8 @@ export function AllPaintings() {
   return (
     <>
       <div id="all-paintings" className="mt-4">
+        <h1>All Paintings</h1>
+        <h3>See details to learn more about each piece.</h3>
         <br />
         <div className="row">
           {paintings.map((painting) => (
