@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+
+import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react"
 
 
@@ -83,22 +84,26 @@ export function Chat() {
         justifyContent: "center",
         alignItems: "center",
         height: "75vh",
-        backgroundColor: "lightgrey",
+        backgroundColor: "rgba(239, 239, 239)",
       }}
     >
-      <div style={{ justifyContent: "center", height: "600px", width: "800px" }}>
+      <div style={{ justifyContent: "center", height: "600px", width: "900px" }}>
         <MainContainer className="parent-chat-container">
           <ChatContainer className="child-chat-container">
             <MessageList
               className="message-list"
-              style={{ backgroundColor: "white" }}
+              style={{ backgroundColor: "white", paddingTop: "5px" }}
               typingIndicator={typing ? <TypingIndicator content="Arnold is typing" /> : null}
             >
               {messages.map((message, i) => {
                 return <Message key={i} model={message} />;
               })}
             </MessageList>
-            <MessageInput placeholder="Type question here" onSend={handleSend} />
+            <MessageInput
+              placeholder="Type question here..."
+              onSend={handleSend}
+              attachButton={false}
+            />
           </ChatContainer>
         </MainContainer>
       </div>
