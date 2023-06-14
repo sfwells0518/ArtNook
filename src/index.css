@@ -467,6 +467,10 @@ li a {
   padding-bottom: 0px;
   font-size: 35px;
   font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 12px;
+  text-decoration-color: #5C8F8E
 }
 
 .add-to-cart-button {
