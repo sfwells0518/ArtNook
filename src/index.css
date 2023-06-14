@@ -108,7 +108,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 81%;
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
@@ -266,7 +266,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 81%;
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
@@ -585,3 +585,250 @@ li a {
 
 }
 
+#category-impressionism .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 81%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#category-impressionism .image-container:hover .overlay {
+  opacity: 1;
+}
+
+#category-impressionism .image-container .text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#category-impressionism .card-body-custom {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+#category-impressionism .card-body-custom .image-container {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#category-impressionism .card-body-custom .image-container .card-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+#category-impressionism .card-title {
+  height: 2.0em;
+  font-size: 10px;
+  margin-top: 7px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+#category-impressionism .card-artist {
+  height: 2.5em;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  font-size: 10px;
+}
+
+#category-surrealism .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 81%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#category-surrealism .image-container:hover .overlay {
+  opacity: 1;
+}
+
+#category-surrealism .image-container .text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#category-surrealism .card-body-custom {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+#category-surrealism .card-body-custom .image-container {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#category-surrealism .card-body-custom .image-container .card-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+#category-surrealism .card-title {
+  height: 2.0em;
+  font-size: 10px;
+  margin-top: 7px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+#category-surrealism .card-artist {
+  height: 2.5em;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  font-size: 10px;
+}
+
+#category-realism .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#category-realism .image-container:hover .overlay {
+  opacity: 1;
+}
+
+#category-realism .image-container .text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#category-realism .card-body-custom {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+#category-realism .card-body-custom .image-container {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#category-realism .card-body-custom .image-container .card-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+#category-realism .card-title {
+  height: 2.0em;
+  font-size: 10px;
+  margin-top: 7px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+#category-realism .card-artist {
+  height: 2.5em;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  font-size: 10px;
+}
+
+#category-abstract .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 81%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#category-abstract .image-container:hover .overlay {
+  opacity: 1;
+}
+
+#category-abstract .image-container .text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#category-abstract .card-body-custom {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+#category-abstract .card-body-custom .image-container {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#category-abstract .card-body-custom .image-container .card-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+#category-abstract .card-title {
+  height: 2.0em;
+  font-size: 25px;
+  margin-top: 7px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+#category-abstract .card-artist {
+  height: 2.5em;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  font-size: 10px;
+}

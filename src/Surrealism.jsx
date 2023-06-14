@@ -42,6 +42,9 @@ export function Surrealism(props) {
                         <br />
                         <br />
                         {painting.artist.name}
+                        <br></br>
+                        <br></br>
+                        {painting.description}
                       </div>
                     </div>
                   </div>
