@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon, ShoppingCartIcon, UserIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, UserIcon } from "@heroicons/react/24/outline";
 import { UserIcon as UserIconSolid, HomeIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { createBrowserHistory } from "history";
@@ -107,12 +107,6 @@ export function Header() {
                <div className="flex items-center mr-2">
                  {" "}
                  {/* Increase the right margin */}
-                 <Link
-                   to="/cart" // replace this with the actual route to your cart
-                   className="text-gray-700 flex items-center hover-item text-sm font-medium px-3 py-2 rounded-md ml-2" // Increase the left margin
-                 >
-                   <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                 </Link>
                </div>
                {/* Profile dropdown */}
                <Menu as="div" className="relative ml-2">

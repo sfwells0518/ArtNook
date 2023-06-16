@@ -8,8 +8,9 @@ html {
 }
 
 body {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: auto;
+  padding-right: auto;
+
 }
 
 #root {
@@ -507,10 +508,10 @@ li a {
   text-align: left;
   text-decoration-color: #5C8F8E;
   text-decoration-line: underline;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 2px;
   text-underline-offset: 6px;
   background: none;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
 }
 

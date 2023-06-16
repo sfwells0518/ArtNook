@@ -65,12 +65,12 @@ export function PaintingsIndex(props) {
             <em>modern</em> home
           </h1>
           <Link to="/all-paintings">
-            <button className="all-paintings-button">Shop All Paintings</button>
+            <button className="all-paintings-button">Explore All Paintings</button>
           </Link>
         </div>
       </div>
       <div className="all-categories-header">
-        <h1> Shop by Category </h1>
+        <h1> Explore by Category </h1>
       </div>
       <div id="paintings-index" className="mt-4">
         <br />
