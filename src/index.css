@@ -446,11 +446,11 @@ li a {
   font-weight: 500;
   border: 1px solid black;
   padding: 10px 10px;
-  font-size: 13px;
+  font-size: 12px;
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px;
-  width: 130px;
+  width: 135px;
   position: relative;
   margin-left: -8.5px;
   }

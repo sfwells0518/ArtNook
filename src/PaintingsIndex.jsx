@@ -60,17 +60,18 @@ export function PaintingsIndex(props) {
         <img src={heroImage} alt="Hero" />
         <div className="hero-text">
           <h1>
-            <em>vintage</em> art for the
-            <br></br>
-            <em>modern</em> home
+            Your gateway to
+          </h1>
+          <h1>
+            the world of art
           </h1>
           <Link to="/all-paintings">
-            <button className="all-paintings-button">Explore All Paintings</button>
+            <button className="all-paintings-button">Browse All Paintings</button>
           </Link>
         </div>
       </div>
       <div className="all-categories-header">
-        <h1> Explore by Category </h1>
+        <h1> Explore by Movement </h1>
       </div>
       <div id="paintings-index" className="mt-4">
         <br />
@@ -93,7 +94,7 @@ export function PaintingsIndex(props) {
                 </div>
                 <div className="mt-auto text-center">
                   <button className="shop-button" onClick={() => handleClick(painting.id, painting.categories[0].name)}>
-                    Explore {painting.categories[0].name}
+                    Discover {painting.categories[0].name}
                   </button>
                 </div>
               </div>
