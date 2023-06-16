@@ -28,7 +28,33 @@ export function Impressionism(props) {
     <>
       <div id="category-impressionism" className="mt-4">
         <h1>Impressionism</h1>
-        <br />
+        <br></br>
+        <h2>Featured Artists</h2>
+        <br></br>
+        <div className="row">
+          {impressionismPaintings.map((painting) => (
+            <div key={painting.id} className="col-sm-3 mb-4">
+              <div className="card custom-card">
+                <div className="image-container">
+                  <img src={painting.artist.artist_image} className="card-image" alt={painting.name} />
+                </div>
+                <div className="card-body card-body-custom">
+                  <div className="text">
+                    {painting.artist.name}
+                    <br />
+                    {painting.artist.birthplace}
+                    <br />
+                    {painting.artist.date_of_birth}
+                    <br />
+                    {painting.artist.fun_fact}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2>Featured Paintings</h2>
+        <br></br>
         <div className="row">
           {impressionismPaintings.map((painting) => (
             <div key={painting.id} className="col-sm-6 mb-2">

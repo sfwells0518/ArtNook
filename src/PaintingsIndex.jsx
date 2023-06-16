@@ -94,7 +94,7 @@ export function PaintingsIndex(props) {
                 </div>
                 <div className="mt-auto text-center">
                   <button className="shop-button" onClick={() => handleClick(painting.id, painting.categories[0].name)}>
-                    Discover {painting.categories[0].name}
+                    {painting.categories[0].name}
                   </button>
                 </div>
               </div>
