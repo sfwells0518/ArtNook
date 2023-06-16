@@ -320,6 +320,10 @@ body {
   align-items: center;
 }
 
+.hero-container img {
+  border-radius: 5px;
+}
+
 .hero-text {
   position: absolute;
   top: 50%;
@@ -446,11 +450,11 @@ li a {
   font-weight: 500;
   border: 1px solid black;
   padding: 10px 10px;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px;
-  width: 135px;
+  width: 142px;
   position: relative;
   margin-left: -8.5px;
   }
