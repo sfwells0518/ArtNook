@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon, UserIcon, ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, UserIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { UserIcon as UserIconSolid, HomeIcon } from "@heroicons/react/24/solid";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
@@ -130,7 +130,7 @@ export function Header() {
                               aria-current={item.current ? "page" : undefined}
                             >
                               {item.name}
-                              <ChevronDoubleDownIcon className="h-4 w-4 ml-1" aria-hidden="true" />{" "}
+                              <ChevronDownIcon className="h-4 w-4 ml-1" aria-hidden="true" />{" "}
                               {/* dropdown icon */}
                             </Dropdown.Toggle>
 

@@ -29,7 +29,7 @@ export function Realism(props) {
       <div id="category-realism" className="mt-4">
         <h1>Realism</h1>
         <h2 style={{ textAlign: "left" }}>
-          <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "25px" }}>
+          <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>
             Featured Artists
           </div>
         </h2>
@@ -58,7 +58,7 @@ export function Realism(props) {
           ))}
         </div>
         <h2 style={{ textAlign: "left" }}>
-          <div className="featured-paintings" style={{ marginTop: "20px", marginBottom: "25px" }}>
+          <div className="featured-paintings" style={{ marginTop: "20px", marginBottom: "35px" }}>
             Featured Paintings
           </div>
         </h2>
