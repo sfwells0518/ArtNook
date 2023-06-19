@@ -229,6 +229,11 @@ body {
   text-underline-offset: 10px;
 }
 
+.featured-movements-dropdown.w-48 {
+  text-align: center;
+}
+
+
 .Chat {
   margin-top: 20px;
   margin-bottom: 15px;

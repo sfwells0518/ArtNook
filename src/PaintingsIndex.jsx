@@ -60,7 +60,7 @@ export function PaintingsIndex(props) {
         <img src={heroImage} alt="Hero" />
         <div className="hero-text">
           <h1>
-            Your gateway to
+            your gateway to
           </h1>
           <h1>
             the world of art
