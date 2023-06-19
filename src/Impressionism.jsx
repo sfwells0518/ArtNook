@@ -28,7 +28,6 @@ export function Impressionism(props) {
     <>
       <div id="category-impressionism" className="mt-4">
         <h1>Impressionism</h1>
-        <br></br>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "25px" }}>
             Featured Artists
