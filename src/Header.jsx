@@ -134,7 +134,7 @@ export function Header() {
                               {/* dropdown icon */}
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu className="featured-movements-dropdown w-48">
+                            <Dropdown.Menu className="featured-movements-dropdown w-48 featured-movements-menu">
                               {item.children.map((child) => (
                                 <li key={child.name}>
                                   <Link className="relative ml-3 hover-item" to={child.href}>

@@ -224,6 +224,7 @@ body {
   text-underline-offset: 10px;
 }
 
+
 .hover-item:hover>span {
   text-decoration-color: #5C8F8E;
   text-decoration-line: underline;
@@ -234,7 +235,6 @@ body {
 .featured-movements-dropdown.w-48 {
   text-align: center;
 }
-
 
 .Chat {
   margin-top: 20px;
@@ -569,7 +569,7 @@ li a {
   opacity: 1;
 }
 
-/* Category Pages Styling */
+/* Category: Impressionism Styling */
 
 #category-impressionism .card-image {
   height: 300px;
@@ -587,6 +587,26 @@ li a {
   text-decoration-thickness: 5px;
   text-underline-offset: 12px;
   text-decoration-color: #5C8F8E
+}
+
+#category-impressionism h2 .featured-artists {
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+
+#category-impressionism h2 .featured-paintings {
+  
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
 }
 
 #category-impressionism .artist-image-container {
@@ -632,6 +652,114 @@ li a {
   text-decoration-color: #5C8F8E
 }
 
+.card-body-custom .text h2 {
+  padding-top: 10px;
+  text-decoration: underline;
+  text-decoration-color: #d59987;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  padding-bottom: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.card-body-custom .text h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-body-custom .text h4 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Category: Surrealism Styling */
+
+#category-surrealism .card-image {
+  height: 300px;
+  /* Adjust the height as needed */
+  width: 100%;
+  /* Set the width to 100% to maintain aspect ratio */
+  object-fit: cover;
+  /* Ensure the image fills the container */
+}
+
+#category-surrealism h1 {
+  margin-bottom: 15px;
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 12px;
+  text-decoration-color: #5C8F8E
+}
+
+#category-surrealism h2 .featured-artists {
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+
+#category-surrealism h2 .featured-paintings {
+
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+#category-surrealism .artist-image-container {
+  position: relative;
+  /* Set the container as the reference for absolute positioning */
+}
+
+#category-surrealism .artist-image-container .overlay {
+  display: none;
+  /* Hide the overlay by default */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#category-surrealism .artist-image-container:hover .overlay {
+  display: flex;
+  /* Show the overlay on hover */
+}
+
+#category-surrealism .artist-image-container .overlay .text {
+  font-size: 13px !important;
+  color: white !important;
+  padding: 8px;
+  text-align: center;
+}
+
+#category-surrealism .artist-image-container .overlay .text h2 {
+  font-size: 15px !important;
+  font-weight: 500;
+  color: white !important;
+  padding: 8px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  text-decoration-color: #5C8F8E
+}
 
 .card-body-custom .text h2 {
   padding-top: 10px;
@@ -658,38 +786,225 @@ li a {
   font-weight: 300;
 }
 
+/* Category: Realism Styling */
 
-#category-surrealism h1 {
-  margin-bottom: 15px;
-  font-size: 35px;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 5px;
-  text-underline-offset: 12px;
-  text-decoration-color: #5C8F8E
-
+#category-realism .card-image {
+  height: 300px;
+  /* Adjust the height as needed */
+  width: 100%;
+  /* Set the width to 100% to maintain aspect ratio */
+  object-fit: cover;
+  /* Ensure the image fills the container */
 }
 
 #category-realism h1 {
   margin-bottom: 15px;
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 800;
   text-decoration: underline;
   text-decoration-thickness: 5px;
   text-underline-offset: 12px;
   text-decoration-color: #5C8F8E
+}
+
+#category-realism h2 .featured-artists {
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+
+#category-realism h2 .featured-paintings {
+
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+#category-realism .artist-image-container {
+  position: relative;
+  /* Set the container as the reference for absolute positioning */
+}
+
+#category-realism .artist-image-container .overlay {
+  display: none;
+  /* Hide the overlay by default */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#category-realism .artist-image-container:hover .overlay {
+  display: flex;
+  /* Show the overlay on hover */
+}
+
+#category-realism .artist-image-container .overlay .text {
+  font-size: 13px !important;
+  color: white !important;
+  padding: 8px;
+  text-align: center;
+}
+
+#category-realism .artist-image-container .overlay .text h2 {
+  font-size: 15px !important;
+  font-weight: 500;
+  color: white !important;
+  padding: 8px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  text-decoration-color: #5C8F8E
+}
+
+.card-body-custom .text h2 {
+  padding-top: 10px;
+  text-decoration: underline;
+  text-decoration-color: #d59987;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  padding-bottom: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.card-body-custom .text h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-body-custom .text h4 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Category: Abstract Styling */
+
+#category-abstract .card-image {
+  height: 300px;
+  /* Adjust the height as needed */
+  width: 100%;
+  /* Set the width to 100% to maintain aspect ratio */
+  object-fit: cover;
+  /* Ensure the image fills the container */
 }
 
 #category-abstract h1 {
   margin-bottom: 15px;
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 800;
   text-decoration: underline;
   text-decoration-thickness: 5px;
   text-underline-offset: 12px;
   text-decoration-color: #5C8F8E
-
 }
+
+#category-abstract h2 .featured-artists {
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+
+#category-abstract h2 .featured-paintings {
+
+  font-size: 25px;
+  font-weight: 100;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+#category-abstract .artist-image-container {
+  position: relative;
+  /* Set the container as the reference for absolute positioning */
+}
+
+#category-abstract .artist-image-container .overlay {
+  display: none;
+  /* Hide the overlay by default */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#category-abstract .artist-image-container:hover .overlay {
+  display: flex;
+  /* Show the overlay on hover */
+}
+
+#category-abstract .artist-image-container .overlay .text {
+  font-size: 13px !important;
+  color: white !important;
+  padding: 8px;
+  text-align: center;
+}
+
+#category-abstract .artist-image-container .overlay .text h2 {
+  font-size: 15px !important;
+  font-weight: 500;
+  color: white !important;
+  padding: 8px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  text-decoration-color: #5C8F8E
+}
+
+.card-body-custom .text h2 {
+  padding-top: 10px;
+  text-decoration: underline;
+  text-decoration-color: #d59987;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  padding-bottom: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.card-body-custom .text h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-body-custom .text h4 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Additional Category Stylings */
 
 #category-impressionism .image-container .overlay {
   position: absolute;

@@ -29,8 +29,11 @@ export function Impressionism(props) {
       <div id="category-impressionism" className="mt-4">
         <h1>Impressionism</h1>
         <br></br>
-        <h2>Featured Artists</h2>
-        <br></br>
+        <h2 style={{ textAlign: "left" }}>
+          <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "25px" }}>
+            Featured Artists
+          </div>
+        </h2>
         <div className="row">
           {impressionismPaintings.map((painting) => (
             <div key={painting.id} className="col-sm-3 mb-4">
@@ -55,9 +58,11 @@ export function Impressionism(props) {
             </div>
           ))}
         </div>
-
-        <h2>Featured Paintings</h2>
-        <br></br>
+        <h2 style={{ textAlign: "left" }}>
+          <div className="featured-paintings" style={{ marginTop: "20px", marginBottom: "25px" }}>
+            Featured Paintings
+          </div>
+        </h2>
         <div className="row">
           {impressionismPaintings.map((painting) => (
             <div key={painting.id} className="col-sm-6 mb-2">
