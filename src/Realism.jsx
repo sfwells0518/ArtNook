@@ -28,6 +28,7 @@ export function Realism(props) {
     <>
       <div id="category-realism" className="mt-4">
         <h1>Realism</h1>
+        <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>
             Featured Artists

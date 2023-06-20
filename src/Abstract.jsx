@@ -28,6 +28,7 @@ export function Abstract(props) {
     <>
       <div id="category-abstract" className="mt-4">
         <h1>Abstract</h1>
+        <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>
             Featured Artists
