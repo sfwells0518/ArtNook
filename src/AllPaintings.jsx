@@ -13,7 +13,8 @@ export function AllPaintings() {
       try {
         const response = await axios.get("http://localhost:3000/paintings.json");
         const paintingsData = response.data;
-        setPaintings(paintingsData);
+        const shuffledPaintings = shuffleArray(paintingsData);
+        setPaintings(shuffledPaintings);
       } catch (error) {
         console.error(error);
       }
@@ -38,11 +39,22 @@ export function AllPaintings() {
     setCurrentPainting(null);
   };
 
+  // Function to shuffle the array
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  };
+
   return (
     <>
       <div id="all-paintings" className="mt-4">
         <h1>All Paintings</h1>
         <h3>See details to learn more about each piece.</h3>
+        <div className="underline"></div>
         <br />
         <div className="row">
           {paintings.map((painting) => (
