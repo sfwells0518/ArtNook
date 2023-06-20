@@ -8,28 +8,37 @@ export function AllPaintings() {
   const [currentPainting, setCurrentPainting] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  useEffect(() => {
-    async function fetchPaintings() {
-      try {
-        let shuffledPaintings;
-        const storedOrder = localStorage.getItem("paintingsOrder");
-        if (storedOrder) {
-          shuffledPaintings = JSON.parse(storedOrder);
-        } else {
-          const response = await axios.get("http://localhost:3000/paintings.json");
-          const paintingsData = response.data;
-          shuffledPaintings = shuffleArray([...paintingsData]);
-          localStorage.setItem("paintingsOrder", JSON.stringify(shuffledPaintings));
-        }
+useEffect(() => {
+  async function fetchPaintings() {
+    try {
+      const response = await axios.get("http://localhost:3000/paintings.json");
+      const paintingsData = response.data;
 
-        setPaintings(shuffledPaintings);
-      } catch (error) {
-        console.error(error);
+      const storedOrder = localStorage.getItem("paintingsOrder");
+      let shuffledPaintings;
+
+      if (storedOrder) {
+        shuffledPaintings = JSON.parse(storedOrder);
+      } else {
+        shuffledPaintings = shuffleArray([...paintingsData]);
+        localStorage.setItem("paintingsOrder", JSON.stringify(shuffledPaintings));
       }
-    }
 
-    fetchPaintings();
-  }, []);
+      if (paintingsData.length !== shuffledPaintings.length) {
+        // New painting added, reshuffle the order
+        shuffledPaintings = shuffleArray([...paintingsData]);
+        localStorage.setItem("paintingsOrder", JSON.stringify(shuffledPaintings));
+      }
+
+      setPaintings(shuffledPaintings);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  fetchPaintings();
+}, []);
+
 
 
   const handleClick = async (id) => {
