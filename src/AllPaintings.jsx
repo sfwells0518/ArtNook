@@ -11,14 +11,13 @@ export function AllPaintings() {
   useEffect(() => {
     async function fetchPaintings() {
       try {
-        const response = await axios.get("http://localhost:3000/paintings.json");
-        const paintingsData = response.data;
-
         let shuffledPaintings;
         const storedOrder = localStorage.getItem("paintingsOrder");
         if (storedOrder) {
           shuffledPaintings = JSON.parse(storedOrder);
         } else {
+          const response = await axios.get("http://localhost:3000/paintings.json");
+          const paintingsData = response.data;
           shuffledPaintings = shuffleArray([...paintingsData]);
           localStorage.setItem("paintingsOrder", JSON.stringify(shuffledPaintings));
         }
@@ -31,6 +30,7 @@ export function AllPaintings() {
 
     fetchPaintings();
   }, []);
+
 
   const handleClick = async (id) => {
     try {
