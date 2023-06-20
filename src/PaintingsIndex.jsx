@@ -59,12 +59,8 @@ export function PaintingsIndex(props) {
       <div className="hero-container">
         <img src={heroImage} alt="Hero" />
         <div className="hero-text">
-          <h1>
-            your gateway to
-          </h1>
-          <h1>
-            the world of art
-          </h1>
+          <h1>your gateway to</h1>
+          <h1>the world of art</h1>
           <Link to="/all-paintings">
             <button className="all-paintings-button">Browse All Paintings</button>
           </Link>
@@ -73,6 +69,7 @@ export function PaintingsIndex(props) {
       <div className="all-categories-header">
         <h1> Explore by Movement </h1>
       </div>
+      <div className="underline"></div>
       <div id="paintings-index" className="mt-4">
         <br />
         <div className="row">
