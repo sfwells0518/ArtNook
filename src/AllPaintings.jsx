@@ -13,7 +13,16 @@ export function AllPaintings() {
       try {
         const response = await axios.get("http://localhost:3000/paintings.json");
         const paintingsData = response.data;
-        const shuffledPaintings = shuffleArray(paintingsData);
+
+        let shuffledPaintings;
+        const storedOrder = localStorage.getItem("paintingsOrder");
+        if (storedOrder) {
+          shuffledPaintings = JSON.parse(storedOrder);
+        } else {
+          shuffledPaintings = shuffleArray([...paintingsData]);
+          localStorage.setItem("paintingsOrder", JSON.stringify(shuffledPaintings));
+        }
+
         setPaintings(shuffledPaintings);
       } catch (error) {
         console.error(error);
