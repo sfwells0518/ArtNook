@@ -50,9 +50,24 @@ export function PaintingsIndex(props) {
   Object.keys(paintingsByCategory).forEach((category) => {
     const paintingsInCategory = paintingsByCategory[category];
     if (paintingsInCategory.length > 0) {
-      paintingsFromCategories.push(paintingsInCategory[0]);
+      let randomPainting;
+
+      // Try to get the painting index from localStorage
+      const savedIndex = localStorage.getItem(category);
+      if (savedIndex !== null && savedIndex < paintingsInCategory.length) {
+        // If there's a saved index for this category and it's valid, use it
+        randomPainting = paintingsInCategory[savedIndex];
+      } else {
+        // If there's no saved index for this category, generate one and save it
+        const randomIndex = Math.floor(Math.random() * paintingsInCategory.length);
+        localStorage.setItem(category, randomIndex);
+        randomPainting = paintingsInCategory[randomIndex];
+      }
+
+      paintingsFromCategories.push(randomPainting);
     }
   });
+
 
   return (
     <>
