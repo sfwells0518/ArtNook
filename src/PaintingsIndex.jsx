@@ -83,6 +83,7 @@ export function PaintingsIndex(props) {
       </div>
       <div className="all-categories-header">
         <h1> Explore by Movement </h1>
+        <h3>Discover artistic movements and delve into curated artworks from each.</h3>
       </div>
       <div className="underline"></div>
       <div id="paintings-index" className="mt-4">
