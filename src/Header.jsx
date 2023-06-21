@@ -12,7 +12,8 @@ const history = createBrowserHistory();
 
 const navigation = [
   { name: "All Paintings", href: "all-paintings", current: false },
-  {
+  
+  /*{
     name: "Featured Movements",
     href: "",
     current: false,
@@ -27,7 +28,8 @@ const navigation = [
       { name: "Romaticism", href: "/paintings/romanticism", current: false },
       // add more movements as needed
     ],
-  },
+  },*/
+
   { name: "AI Art Assistant", href: "/chat", current: false },
   { name: "Artist Map", href: "/artist-map", current: false },
 ];
