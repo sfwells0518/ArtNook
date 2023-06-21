@@ -16,6 +16,7 @@ import { Impressionism } from "./Impressionism";
 import { Surrealism } from "./Surrealism";
 import { Realism } from "./Realism";
 import { Abstract } from "./Abstract";
+import { Cubism } from "./Cubism";
 import { Modal } from "./Modal";
 
 
@@ -67,6 +68,7 @@ export function Content() {
         <Route path="/paintings/surrealism" element={<Surrealism />} />
         <Route path="/paintings/realism" element={<Realism />} />
         <Route path="/paintings/abstract" element={<Abstract />} />
+        <Route path="/paintings/cubism" element={<Cubism />} />
       </Routes>
 
       <Modal show={isPaintingsShowVisible} onClose={handleClose}>

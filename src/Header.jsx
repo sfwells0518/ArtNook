@@ -21,6 +21,7 @@ const navigation = [
       { name: "Surrealism", href: "/paintings/surrealism", current: false },
       { name: "Realism", href: "/paintings/realism", current: false },
       { name: "Abstract", href: "/paintings/abstract", current: false },
+      { name: "Cubism", href: "/paintings/cubism", current: false },
       // add more movements as needed
     ],
   },
