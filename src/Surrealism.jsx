@@ -28,6 +28,9 @@ export function Surrealism(props) {
     <>
       <div id="category-surrealism" className="mt-4">
         <h1>Surrealism</h1>
+        <h3>
+          An artistic and literary movement seeking to explore the realm of dreams and the unconscious mind, often portraying fantastical and bizarre imagery with unexpected juxtapositions.
+        </h3>
         <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>

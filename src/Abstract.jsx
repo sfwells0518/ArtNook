@@ -28,6 +28,9 @@ export function Abstract(props) {
     <>
       <div id="category-abstract" className="mt-4">
         <h1>Abstract</h1>
+        <h3>
+          A style of art that does not attempt to represent an accurate depiction of visual reality, often using shapes, forms, colors, and gestural marks to convey emotions or ideas.
+        </h3>
         <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>

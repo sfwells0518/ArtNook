@@ -28,6 +28,12 @@ export function Cubism(props) {
     <>
       <div id="category-cubism" className="mt-4">
         <h1>Cubism</h1>
+        <div className="category-description">
+          <h3>
+            An avant-garde movement developed by Pablo Picasso and Georges Braque, characterized by the depiction of
+            objects from multiple viewpoints simultaneously, using geometric shapes and fragmented forms.
+          </h3>
+        </div>
         <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>
