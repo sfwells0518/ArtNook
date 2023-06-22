@@ -28,9 +28,12 @@ export function Realism(props) {
     <>
       <div id="category-realism" className="mt-4">
         <h1>Realism</h1>
-        <h3>
-          An artistic movement that aims to depict subjects as they appear in reality, emphasizing accurate representation and focusing on ordinary people, places, and events.
-        </h3>
+        <div className="category-description">
+          <h3>
+            An artistic movement that aims to depict subjects as they appear in reality, emphasizing accurate
+            representation and focusing on ordinary people, places, and events.
+          </h3>
+        </div>
         <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>

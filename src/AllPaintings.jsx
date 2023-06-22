@@ -70,7 +70,7 @@ useEffect(() => {
   return (
     <>
       <div id="all-paintings" className="mt-4">
-        <h1>All Paintings</h1>
+        <h1>All Featured Paintings</h1>
         <h3>See details to learn more about each piece.</h3>
         <div className="underline"></div>
         <br />

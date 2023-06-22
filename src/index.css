@@ -324,17 +324,18 @@ body {
 }
 
 .hero-container {
-  opacity: 100%;
-  margin: 15px auto;
-  height: auto;
-  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+  padding: 30px 0;
 }
 
 .hero-container img {
   border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 
 .hero-text {
@@ -342,10 +343,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   font-weight: bold;
-  font-size: 47px;
-  text-align: center;
+  font-size: 4vw;
+  /* Adjust the font size as needed */
+}
+
+.hero-text-line {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
 /* Sign Up Form CSS*/
@@ -482,7 +490,7 @@ li a {
 }
 
 .all-categories-header h1 {
-  padding-top: 30px;
+  padding-top: 10px;
   margin-bottom: 5px;
   padding-bottom: 0px;
   font-size: 35px;
@@ -493,8 +501,8 @@ li a {
   padding-top: 0px;
   margin-bottom: 10px;
   padding-bottom: 2px;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 100;
 }
 
 .add-to-cart-button {
@@ -577,6 +585,18 @@ li a {
 
 .cs-button:disabled {
   opacity: 1;
+}
+
+/* Category Description h3: Styling for All Category/Movement Pages h3 */
+
+#category-impressionism .category-description h3 {
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  width: 50%;
+  text-align: center;
+  font-weight: 100;
 }
 
 /* Category: Impressionism Styling */
@@ -694,6 +714,16 @@ li a {
 
 /* Category: Surrealism Styling */
 
+#category-surrealism .category-description h3 {
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  width: 50%;
+  text-align: center;
+  font-weight: 100;
+}
+
 #category-surrealism .card-image {
   height: 300px;
   /* Adjust the height as needed */
@@ -798,6 +828,16 @@ li a {
 
 /* Category: Realism Styling */
 
+#category-realism .category-description h3 {
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  width: 50%;
+  text-align: center;
+  font-weight: 100;
+}
+
 #category-realism .card-image {
   height: 300px;
   /* Adjust the height as needed */
@@ -901,6 +941,16 @@ li a {
 }
 
 /* Category: Abstract Styling */
+
+#category-abstract .category-description h3 {
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  width: 50%;
+  text-align: center;
+  font-weight: 100;
+}
 
 #category-abstract .card-image {
   height: 300px;
@@ -1255,6 +1305,16 @@ li a {
 }
 
 /* Category: Cubism - Styling */
+
+#category-cubism .category-description h3 {
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  width: 50%;
+  text-align: center;
+  font-weight: 100;
+}
 
 #category-cubism .card-image {
   height: 300px;

@@ -28,9 +28,13 @@ export function Impressionism(props) {
     <>
       <div id="category-impressionism" className="mt-4">
         <h1>Impressionism</h1>
-        <h3>
-          An art movement characterized by capturing fleeting moments of light and color in loose brushwork and emphasizing the artist's subjective impression of a scene rather than its detailed representation
-        </h3>
+        <div className="category-description">
+          <h3>
+            An art movement characterized by capturing fleeting moments of light and color in loose brushwork and
+            emphasizing the artist's subjective impression of a scene rather than its detailed representation.
+          </h3>
+        </div>
+        
         <div className="underline"></div>
         <h2 style={{ textAlign: "left" }}>
           <div className="featured-artists" style={{ marginTop: "20px", marginBottom: "35px" }}>
